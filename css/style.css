@@ -3,7 +3,14 @@ body{
 }
 
 .backcolor{
-	/*background-color: black;*/
 	max-width:100%; 
 	height:auto
+}
+
+.thumbnail{
+background-color: #ECECEA;
+}
+
+.nav{
+margin-top: 4vh;
 }
