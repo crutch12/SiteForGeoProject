@@ -2,23 +2,23 @@ body{
 	background-color: #F5F3EE;
 }
 
-.backcolor{
+.image{
 	max-width:100%; 
-	height:auto
+	height:auto;
+	padding: 2vh;
 }
 
 .thumbnail{
 background-color: #ECECEA;
 height: 100%;
 margin-bottom: 3vh;
-padding: 2vh;
+/*padding: 1vh;*/
 }
 
 .nav{
 margin-top: 3vh;
 }
 
-.resume{
-background-color: #ECECEA;
-
+hr{
+border-color: #DDDDDD;
 }
