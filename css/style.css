@@ -9,8 +9,16 @@ body{
 
 .thumbnail{
 background-color: #ECECEA;
+height: 100%;
+margin-bottom: 3vh;
+padding: 2vh;
 }
 
 .nav{
-margin-top: 4vh;
+margin-top: 3vh;
+}
+
+.resume{
+background-color: #ECECEA;
+
 }
