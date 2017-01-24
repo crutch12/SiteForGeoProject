@@ -1,0 +1,9 @@
+body{
+	background-color: #F5F3EE;
+}
+
+.backcolor{
+	/*background-color: black;*/
+	max-width:100%; 
+	height:auto
+}
