@@ -51,13 +51,31 @@ function WhichPage(){
 				}
             }
      }          
-
-	
-
-	//alert(pageName);
 }
-	//alert(pageName);
+
 WhichPage();
+currentMenuItem = document.getElementById("mainDiv");
+
+LoadData('index.html');
+
+function LoadData(fileName){
+	// var request = new XMLHttpRequest();
+	// request.open('GET', fileName);
+	// request.onreadystatechange = function() {
+	//     if (request.readyState == 4) {
+	//         if (request.status == 200) {
+	//             currentMenuItem.innerHTML = request.responseText;
+	//         } else {
+	//             alert('Сетевая ошибка, код: ' + request.status);
+	//         }
+	//     }
+	// };
+	// request.send(null);
+
+	$( "#mainDiv" ).load( "map.html" );
+}
+
+
 
 // var url = document.createElement('a');
 // url.href = location.pathname;
