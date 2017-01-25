@@ -86,7 +86,7 @@ function LoadData(fileName){
   alert( "Load contentDiv was performed." );
 });
 
-    document.getElementsByTagName("body")[0].reload();
+    // document.getElementsByTagName("body")[0].reload();
 
 }
 
