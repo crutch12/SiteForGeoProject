@@ -82,7 +82,7 @@ function LoadData(fileName){
 //   alert( "Load head was performed." );
 // });
 	document.getElementsByTagName('head')[0].innerHTML = "";
-	$( "#head" ).load( fileName + " #head", function() {
+	$( "#head" ).append( fileName + " #head", function() {
   alert( "Load head was performed." );
 
     $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
