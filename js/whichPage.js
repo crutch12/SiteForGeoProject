@@ -14,6 +14,20 @@ function WhichPage(){
 
 	var count = links.length;
 	var specName = 'active';
+
+	if (!pageName){
+	var mainPage = document.getElementById("mainPage");
+	mainPage.classList.add(specName);
+	}else{
+		for(var i=0; i<count; i++){
+			if(links[i].href == THref){
+				links[i].parentElement.classList.add(specName);
+				//links[i].style.backgroundColor = 'yellow';
+				}else{
+					links[i].parentElement.classList.remove(specName);
+				}
+			}
+		}
      
 	for(var i = 0; i < k.length; i++){
 		k[i].onclick = function (){
