@@ -11,9 +11,9 @@ body{
 .thumbnail{
 background-color: #ECECEA;
 height: 100%;
-margin-bottom: 15px;
+margin-bottom: 20px;
 
-min-height: 300px;
+/*min-height: 300px;*/
 /*padding: 1vh;*/
 }
 
