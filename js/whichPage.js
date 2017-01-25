@@ -81,6 +81,9 @@ function LoadData(fileName){
 //     $( "#containerHead" ).load( "map.html #head", function() {
 //   alert( "Load head was performed." );
 // });
+	document.getElementsByTagName('head')[0].innerHTML = "";
+	$( "#head" ).load( fileName + " #head", function() {
+  alert( "Load head was performed." );
 
     $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
   alert( "Load contentDiv was performed." );
