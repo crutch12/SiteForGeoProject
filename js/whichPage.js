@@ -84,7 +84,8 @@ function LoadData(fileName){
 	document.getElementsByTagName('head')[0].innerHTML = "";
 	$( "#head" ).append( fileName + " #head", function() {
   alert( "Load head was performed." );
-
+});
+	
     $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
   alert( "Load contentDiv was performed." );
 });
