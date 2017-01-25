@@ -15,6 +15,11 @@ function WhichPage(){
 	var count = links.length;
 	var specName = 'active';
 
+	// if (pageName[pageName.length - 1] != '#'){
+	// 	pageName += '#';
+	// 	THref += '#';
+	// }
+
 	if (!pageName){
 	var mainPage = document.getElementById("mainPage");
 	mainPage.classList.add(specName);
