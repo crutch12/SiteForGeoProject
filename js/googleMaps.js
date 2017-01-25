@@ -1,8 +1,33 @@
+var mapscaler = document.getElementById('mapscaler');
+var preloader = document.getElementById('preloader');
+
 function initMap() {
+
+
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 55.753, lng: 37.609},
     zoom: 10
   });
+
+
+//         google.maps.event.addListenerOnce(map, 'idle', function(){
+//   preloader.classList.add('collapse');
+//   mapscaler.classList.remove('collapsed');
+// });
+
+        google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+    //this part runs when the mapobject is created and rendered
+    google.maps.event.addListenerOnce(map, 'idle', function(){
+        //this part runs when the mapobject shown for the first time
+        preloader.classList.add('collapse');
+  mapscaler.classList.remove('collapsed');
+    });
+});
+
+
+  
+
+
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -22,6 +47,8 @@ function initMap() {
     map.setCenter(marker.getPosition());
   });
 
+
+
       map.setCenter(pos);
       map.setZoom(14);
 
@@ -32,9 +59,9 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
-
-
 }
+
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
@@ -42,3 +69,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: The Geolocation service failed.' :
                         'Error: Your browser doesn\'t support geolocation.');
 }
+

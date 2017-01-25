@@ -8,7 +8,6 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
     <link rel="stylesheet" href="css/googleMaps.css">
 </head>
 <body>
@@ -25,16 +24,23 @@
 		</div>
 
 		<hr>
+			<div class="row thumbnail ">
 
-		<div class="row mapscaler">
-			    <div id="map"></div>
-    <script src="js/googleMaps.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCaEb3h05-xG8waQtdCRIgiKXUTysiPi0&callback=initMap"
-        async defer></script>
-        <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
-			
+				<div class="preloader" id="preloader">
+					<img src="images/BigCircle.png" class="big" alt="">
+					<img src="images/LittleCircle.png" class="little" alt="">
+				</div>
+
+				<div id="mapscaler" class="mapscaler collapsed">
+					<div id="map"></div>
+		    		<script src="js/googleMaps.js"></script>
+		    		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCaEb3h05-xG8waQtdCRIgiKXUTysiPi0&callback=initMap"
+		        	async defer></script>
+		        	<script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
+				</div>
+				
+
 		</div>
-	
 	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

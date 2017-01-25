@@ -8,15 +8,16 @@ var THref = location.href;
 var pageName = THref.substr(THref.lastIndexOf('/') + 1);
 var count = links.length;
 
-var specName = ' active';
+var specName = 'active';
 
 if (!pageName){
 	var mainPage =  document.getElementById("mainPage");
-	mainPage.className += specName;
+	mainPage.classList.add(specName);
 	}else{
 		for(var i=0; i<count; i++){
 	  		if(links[i].href == THref){
-	  			links[i].parentElement.className += specName;
+	  			links[i].parentElement.classList.add(specName);
+	  			//links[i].style.backgroundColor = 'yellow';
 		}
 	}
 }

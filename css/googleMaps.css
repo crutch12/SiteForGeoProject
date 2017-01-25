@@ -5,3 +5,90 @@ height: 80vh;
 #map {
 height: 100%;
 }
+
+.mapscaler{
+/*visibility: hidden;*/
+/*height: 0px;*/
+}
+
+.big{
+	/*margin-left: calc(50%);
+
+
+      -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition:         transform .5s ease-in-out;*/
+
+
+    /*margin-right: auto;*/
+/*margin-top: 50%;*/
+    /*transform: translate(-50%, -350%);*/
+
+    position: fixed;
+	width: 200px;
+	height: 200px;
+
+animation-name: rotationBig; /*Имя анимации. Немного ниже мы создадим анимацию с этим именем. Не сделайте их разными, иначе не заработает.*/
+animation-duration: 2s; /*Задаем продолжительность одного цикла анимации.*/
+animation-iteration-count: infinite; /*Задаем количество повторений цикла, в нашем случае — бесконечность.*/
+animation-timing-function: linear; /*Ну и указываем плавный тип анимации.*/
+}
+
+.little{
+
+	position: fixed;
+	width: 140px;
+	height: 140px;
+
+	margin-top: 30px;
+	margin-left: 30px;
+	/*margin-left: calc(50%);
+
+
+      -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition:         transform .5s ease-in-out;*/
+
+
+    /*margin-right: auto;*/
+/*margin-top: 50%;*/
+    /*transform: translate(-50%, -350%);*/
+
+animation-name: rotationLittle; /*Имя анимации. Немного ниже мы создадим анимацию с этим именем. Не сделайте их разными, иначе не заработает.*/
+animation-duration: 4s; /*Задаем продолжительность одного цикла анимации.*/
+animation-iteration-count: infinite; /*Задаем количество повторений цикла, в нашем случае — бесконечность.*/
+animation-timing-function: linear; /*Ну и указываем плавный тип анимации.*/
+}
+
+/*.preloader:hover{
+	-ms-transform: rotate(360deg); 
+    -webkit-transform: rotate(360deg); 
+    transform: rotate(360deg);
+}*/
+
+@keyframes rotationBig { /*Создаем ключевые кадры для анимации с именем «rotation».*/
+0% {transform:rotate(0deg);} /*Старт цикла, картинка повернута на 0 градусов о.О*/
+100% {transform:rotate(360deg);} /*Конец цикла, картинка повернута на 360 градусов, т.е. ее полный оборот.*/
+} 
+
+@keyframes rotationLittle { /*Создаем ключевые кадры для анимации с именем «rotation».*/
+0% {transform:rotate(0deg);} /*Старт цикла, картинка повернута на 0 градусов о.О*/
+100% {transform:rotate(360deg);} /*Конец цикла, картинка повернута на 360 градусов, т.е. ее полный оборот.*/
+} 
+
+.preloader{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 200px;
+height: 200px;
+z-index: 10;
+/*background-color: black;*/
+}
+
+.collapsed{
+ visibility: collapse;
+}
+
+.thumbnail{
+	position:relative;
+}

@@ -5,13 +5,15 @@ body{
 .image{
 	max-width:100%; 
 	height:auto;
-	padding: 2vh;
+	padding: 5px;
 }
 
 .thumbnail{
 background-color: #ECECEA;
 height: 100%;
-margin-bottom: 3vh;
+margin-bottom: 15px;
+
+min-height: 300px;
 /*padding: 1vh;*/
 }
 
@@ -21,5 +23,32 @@ margin-top: 3vh;
 
 hr{
 border-color: #DDDDDD;
-
 }
+
+
+
+/*li{
+
+}*/
+
+/*a:hover{
+	background-color: black !important;
+}*/
+
+/*li:active{
+	background-color: black !important;
+}*/
+
+/*.nav>li>a:active {
+  background-color:yellow !important;
+}*/
+
+/*li.actived{
+	background-color:yellow;	
+	border-radius: 10px;
+}
+
+.nav>li>a:active{
+	background-color:black;	
+	border-radius: 10px;
+}*/
