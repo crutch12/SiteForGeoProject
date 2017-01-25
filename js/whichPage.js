@@ -15,11 +15,6 @@ function WhichPage(){
 	var count = links.length;
 	var specName = 'active';
 
-	// if (pageName[pageName.length - 1] != '#'){
-	// 	pageName += '#';
-	// 	THref += '#';
-	// }
-
 	if (!pageName){
 	var mainPage = document.getElementById("mainPage");
 	mainPage.classList.add(specName);
@@ -29,7 +24,7 @@ function WhichPage(){
 				links[i].parentElement.classList.add(specName);
 				//links[i].style.backgroundColor = 'yellow';
 				}else{
-					links[i].parentElement.classList.remove(specName);
+					//links[i].parentElement.classList.remove(specName);
 				}
 			}
 		}
