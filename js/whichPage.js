@@ -72,8 +72,12 @@ function LoadData(fileName){
 	// };
 	// request.send(null);
 
-    $( "#mainDiv" ).load( "load.html", function() {
-  alert( "Load was performed." );
+    $( "#mainDiv" ).load( "map.html #mainDiv", function() {
+  alert( "Load maindDiv was performed." );
+});
+
+    $( "#head" ).load( "map.html #head", function() {
+  alert( "Load head was performed." );
 });
 }
 
