@@ -49,14 +49,18 @@ function WhichPage(){
 						}
 					}
 				}
+
+			var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
+			alert(lastname);
+			LoadData(lastname);
+
             }
      }          
 }
 
 WhichPage();
-currentMenuItem = document.getElementById("mainDiv");
 
-LoadData('index.html');
+//var currentMenuItem = document.getElementById("mainDiv");
 
 function LoadData(fileName){
 	// var request = new XMLHttpRequest();
@@ -79,7 +83,7 @@ function LoadData(fileName){
     $( "#containerDiv" ).load( "map.html #contentDiv", function() {
   alert( "Load contentDiv was performed." );
 });
-    
+
 }
 
 
