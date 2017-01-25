@@ -54,6 +54,8 @@ function WhichPage(){
 			alert(lastname);
 			LoadData(lastname);
 
+
+
             }
      }          
 }
@@ -80,9 +82,11 @@ function LoadData(fileName){
 //   alert( "Load head was performed." );
 // });
 
-    $( "#containerDiv" ).load( "map.html #contentDiv", function() {
+    $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
   alert( "Load contentDiv was performed." );
 });
+
+    document.getElementsByTagName("body")[0].reload();
 
 }
 
