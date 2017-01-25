@@ -16,13 +16,25 @@ function initMap() {
 // });
 
         google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-    //this part runs when the mapobject is created and rendered
-    google.maps.event.addListenerOnce(map, 'idle', function(){
-        //this part runs when the mapobject shown for the first time
-        preloader.classList.add('collapse');
+  preloader.classList.add('collapse');
   mapscaler.classList.remove('collapsed');
-    });
 });
+
+//         google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
+//     google.maps.event.addListenerOnce(map, 'idle', function(){
+//         preloader.classList.add('collapse');
+//   mapscaler.classList.remove('collapsed');
+//     });
+// });
+
+//         map.addEventListener('google-map-ready', function(e) {
+//    preloader.classList.add('collapse');
+//   mapscaler.classList.remove('collapsed');
+// });
+
+    //     GEvent.addListener(map, "tilesloaded", function() {
+    //   console.log("Map is fully loaded");
+    // });
 
 
   
