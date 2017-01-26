@@ -77,4 +77,24 @@ function LoadData(url){
 
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
+
+
 }
+
+$(window).bind('popstate', function() {
+	$.ajax({
+    	url:     location.pathname + '?ajax=1',
+    	success: function(result) {
+
+    	var str = JSON.stringify(result);
+		var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
+		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+		var doc = $($.parseXML(title));
+		var textTitle = doc.find('title').text();
+		document.getElementsByTagName('title')[0].innerHTML = textTitle;
+
+		$('#containerDiv').html($(result).find('#contentDiv'));
+       	 
+    	}
+	});
+});
