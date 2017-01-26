@@ -15,7 +15,7 @@
 
 	<div class="container bs-cont" >
 	
-		<div class="row">
+		<div>
 
 			<ul class="nav nav-pills nav-justified" id ="navigation">
 			  <li role="presentation" id="mainPage"><a href="index.html" onclick="javascript:WhichPage();">Резюме</a></li>
@@ -27,9 +27,37 @@
 
 		<hr>
 
-		<div class="row thumbnail" id="containerDiv">
+		<div class="thumbnail" id="containerDiv">
 			<div id="contentDiv">
-				<b id="time"></b>
+				<div class="time row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<!-- <img src="images/tim_cook.png" alt=""> -->
+						<div>
+							<center id="hoursTime" class="hours"/>
+						</div>
+						<div>
+							<center>Ч.</center>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div>
+							<center id="minutesTime" class="minutes"/>
+						</div>
+						<div>
+							<center>М.</center>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<div>
+							<center id="secondsTime" class="seconds"/>
+						</div>
+						<div>
+							<center>С.</center>
+						</div>
+					</div>
+				</div>
 				<script>
 					StartTimer();
 				</script>

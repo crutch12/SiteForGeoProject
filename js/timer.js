@@ -1,36 +1,53 @@
 var start = Date.now();
 
+var hoursTime;
+var minutesTime;
+var secondsTime;
+
 //var times;
 
 function StartTimer() {    
 	//times = Math.floor((Date.now() - start));
 
-	var time = document.getElementById('time');
-    Tic(time);
+	hoursTime = document.getElementById('hoursTime');
+	minutesTime = document.getElementById('minutesTime');
+	secondsTime = document.getElementById('secondsTime');
+    
+    Tic();
 }
 
-function Tic(time){
+function Tic(){
 
-		ShowTime(time);
+	ShowTime();
 
 	 	setTimeout(function() {
-
-        //++;
-
-        ShowTime(time);
-
-        Tic(time);
+	        ShowTime();
+	        Tic();
     }, 100);
 }
 
 //startTimer();
 
-function ShowTime(time){
+function ShowTime(){
 	var passedTime = Math.floor((Date.now() - start) / 1000);
 
-	var houres = Math.floor(passedTime / (60 * 60));
-	var minutes = Math.floor((passedTime - houres * 60 * 60) / (60));
-	var seconds = Math.floor(passedTime - minutes * 60);
+	var hours = Math.floor(passedTime / (60 * 60));
+	var minutes = Math.floor((passedTime - hours * 60 * 60) / 60);
+	var seconds = Math.floor(passedTime - minutes * 60 - hours * 60 * 60);
 
-	time.innerHTML = houres + " " + minutes + " " + seconds; 
+	// hoursTime.innerHTML = hours;
+	// minutesTime.innerHTML = minutes;
+	// secondsTime.innerHTML = seconds;
+
+	hoursTime.innerHTML = PasteZero(hours);
+	minutesTime.innerHTML = PasteZero(minutes);
+	secondsTime.innerHTML = PasteZero(seconds);
+}
+
+function PasteZero(value){
+	if(value.toString().length < 2){
+		return 0 + value.toString();
+	}
+
+	return value;
 }
