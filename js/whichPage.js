@@ -99,9 +99,8 @@ function LoadData(fileName){
     		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		//var str = JSON.stringify($(result).find('#contentDiv'));
-    		var data = JSON.parse($("#contentDiv").html());
-    		//var cont = JSON.stringify($(result));
-    		alert(data);
+    		var cont = ($(result).find('#contentDiv')).html(); 
+			alert(cont);
         }});
 
     // document.getElementsByTagName("body")[0].reload();
