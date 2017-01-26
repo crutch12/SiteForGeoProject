@@ -120,15 +120,16 @@ function LoadData(fileName){
 			//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
 			document.getElementsByTagName('title')[0].innerHTML = newTitle;  */
 
-			var inner = ($(result).find('#contentDiv')).innerHTML;
-			alert(inner);
+			// var inner = ($(result).find('#contentDiv')).innerHTML;
+			// alert(inner);
 
-			var title = $(result).find('#contentDiv');
-			alert(title);
+			// var title = $(result).find('#contentDiv');
+			// alert(title);
 
-			var Htmlinner = $(result).find('#contentDiv').html();
-			alert(Htmlinner);
+			// var Htmlinner = $(result).find('tit').html();
+			// alert(Htmlinner);
 
+			$('title').html($(result).find('title'));
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
