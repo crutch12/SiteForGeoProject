@@ -52,7 +52,7 @@ function WhichPage(){
 
 			//var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
 			//alert(lastname);
-			LoadData(THref.href);
+			//LoadData(THref.href);
 
 
 
@@ -62,39 +62,69 @@ function WhichPage(){
 
 WhichPage();
 
-function LoadData(url){
+// function LoadData(url){
 
-	var fileName = url.substr(url.lastIndexOf('#') + 1);
+// 	var fileName = url.substr(url.lastIndexOf('#') + 1);
 
-    $.ajax({url: fileName, success: function(result){
+//     $.ajax({url: fileName, success: function(result){
 
-    		var str = JSON.stringify(result);
-			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
-    		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
-    		var doc = $($.parseXML(title));
-			var textTitle = doc.find('title').text();
-			document.getElementsByTagName('title')[0].innerHTML = textTitle;
+//     		var str = JSON.stringify(result);
+// 			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
+//     		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+//     		var doc = $($.parseXML(title));
+// 			var textTitle = doc.find('title').text();
+// 			document.getElementsByTagName('title')[0].innerHTML = textTitle;
 
-			$('#containerDiv').html($(result).find('#contentDiv'));
-        }});
+// 			$('#containerDiv').html($(result).find('#contentDiv'));
+//         }});
 
 
-}
+// }
+
+$(document).ready(function() {
+    $('li').click(function() {
+        var url = $(this).attr('href');
+
+        $.ajax({
+            url:     url + '?ajax=1',
+            success: function(data){
+                $('#contentDiv').html(data);
+            }
+        });
+
+        // А вот так просто меняется ссылка
+        if(url != window.location){
+            window.history.pushState(null, null, url);
+        }
+
+        // Предотвращаем дефолтное поведение
+        return false;
+    });
+});
 
 $(window).bind('popstate', function() {
-	$.ajax({
-    	url:     location.pathname + '?ajax=1',
-    	success: function(result) {
-
-    	var str = JSON.stringify(result);
-		var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
-		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
-		var doc = $($.parseXML(title));
-		var textTitle = doc.find('title').text();
-		document.getElementsByTagName('title')[0].innerHTML = textTitle;
-
-		$('#containerDiv').html($(result).find('#contentDiv'));
-       	 
-    	}
-	});
+    $.ajax({
+        url:     location.pathname + '?ajax=1',
+        success: function(data) {
+            $('#containerDiv').html(data);
+        }
+    });
 });
+
+// $(window).bind('popstate', function() {
+// 	$.ajax({
+//     	url:     location.pathname + '?ajax=1',
+//     	success: function(result) {
+
+//     	var str = JSON.stringify(result);
+// 		var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
+// 		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+// 		var doc = $($.parseXML(title));
+// 		var textTitle = doc.find('title').text();
+// 		document.getElementsByTagName('title')[0].innerHTML = textTitle;
+
+// 		$('#containerDiv').html($(result).find('#contentDiv'));
+       	 
+//     	}
+// 	});
+// });
