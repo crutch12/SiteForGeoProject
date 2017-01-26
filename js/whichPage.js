@@ -95,9 +95,7 @@ function LoadData(fileName){
 // });
 
     $.ajax({url: fileName, success: function(result){
-            //$("#containerDiv").html(result);
-    		$('#head').html($(result).find('#head'));
-    		//$('#containerDiv').html($(result).find('#contentDiv'));
+    		$('#containerDiv').html($(result).find('#contentDiv'));
     		alert(fileName + " was performed");
         }});
 
