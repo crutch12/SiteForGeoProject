@@ -97,21 +97,23 @@ function LoadData(fileName){
     $.ajax({url: fileName, success: function(result){
             //$("#containerDiv").html(result);
     		//$('#head').html($(result).find('#head'));
-    		//$('#containerDiv').html($(result).find('#contentDiv'));
+    		
     		
 
     		var str = JSON.stringify(result);
-    		alert("html " + str);
+    		//alert("html " + str);
 
     		//var html = str.replace(/[\n\t\r]/g,"");
 
 			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
-			alert("without n t " + html);
+			//alert("without n t " + html);
 
     		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
-			alert("head " + head);
+			//alert("head " + head);
 
 			document.getElementsByTagName('head')[0].innerHTML = head;
+
+			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
     // document.getElementsByTagName("body")[0].reload();
