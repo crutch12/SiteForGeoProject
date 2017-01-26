@@ -1,10 +1,10 @@
 var start = Date.now();
-var time;
 
 function StartTimer() {    
 	var seconds = Math.floor((Date.now() - start) / 1000);
+	var time = document.getElementById('time');
 
-	ShowTime(seconds);
+	ShowTime(seconds, time);
 
     setTimeout(function() {
 
@@ -25,7 +25,6 @@ function StartTimer() {
 
 //startTimer();
 
-function ShowTime(seconds){
-      	time = document.getElementById('time');
+function ShowTime(seconds, time){
 		time.innerHTML = seconds;  
 }
