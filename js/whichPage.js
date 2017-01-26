@@ -81,7 +81,7 @@ function LoadData(fileName){
 //     $( "#containerHead" ).load( "map.html #head", function() {
 //   alert( "Load head was performed." );
 // });
-	document.getElementsByTagName('head')[0].innerHTML = "";
+	//document.getElementsByTagName('head')[0].innerHTML = "";
 // 	$( "#head" ).append( fileName + " #head", function() {
 //   alert( "Load head was performed." );
 // });
@@ -96,9 +96,9 @@ function LoadData(fileName){
 
     $.ajax({url: fileName, success: function(result){
             //$("#containerDiv").html(result);
-    		//$('#head').html($(result).find('#head'));
-    		//$('#containerDiv').html($(result).find('#contentDiv'));
-    		alert(fileName + " was performed (without head and content)");
+    		$('#head').html($(result).find('#head'));
+    		$('#containerDiv').html($(result).find('#contentDiv'));
+    		alert(fileName + " was performed");
         }});
 
     // document.getElementsByTagName("body")[0].reload();
