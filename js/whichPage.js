@@ -99,7 +99,7 @@ function LoadData(fileName){
     		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		var str = JSON.stringify($(result).find('#contentDiv'));
-    		alert(str);
+    		alert("content " + str);
         }});
 
     // document.getElementsByTagName("body")[0].reload();
