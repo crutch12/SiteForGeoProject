@@ -64,7 +64,7 @@ WhichPage();
 
 function LoadData(url){
 
-	var fileName = url.substr(THref.href.lastIndexOf('#') + 1);
+	var fileName = url.substr(url.lastIndexOf('#') + 1);
 
     $.ajax({url: fileName, success: function(result){
 
