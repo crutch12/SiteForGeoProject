@@ -89,6 +89,5 @@ $(window).bind('popstate', function() {
             $('#containerDiv').html($(result).find('#contentDiv'));
         }
     });
-
     WhichPage();
 });

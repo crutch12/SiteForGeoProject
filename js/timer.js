@@ -26,7 +26,7 @@ function Tic(hoursTime, minutesTime, secondsTime){
 	 	setTimeout(function() {
 	        ShowTime(hoursTime, minutesTime, secondsTime);
 	        Tic(hoursTime, minutesTime, secondsTime);
-    }, 100);
+    }, 30);
 }
 
 //startTimer();

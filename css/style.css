@@ -5,17 +5,18 @@ body{
 .image{
 	max-width:100%; 
 	height:auto;
-	padding: 5px;
+	margin-top: 5%;
 }
 
 .thumbnail{
 background-color: #ECECEA;
-height: 100%;
+/*height: 100%;*/
 margin-bottom: 20px;
+padding: 20px;
 }
 
 .nav{
-margin-top: 3vh;
+margin-top: 20px;
 }
 
 hr{
@@ -23,24 +24,17 @@ border-color: #DDDDDD;
 }
 
 .time{
-	/*vertical-align: center;*/
-	/*width: auto;*/
-	/*background-color: black;*/
 	width:50%;
 	margin-left: 25%;
 	margin-right: 25%;
-	margin-top: 5%;
 	margin-bottom: 5%;
-	/*z-index: 33;*/
 }
 
  .hours, .minutes, .seconds{
  	font-size: 50px;
-	background-image: url(images/tim_cook.png) no-repeat;
- 	/*margin-left: 5vh;*/
- 	/*margin-right: 5vh;*/
- 	/*margin-left: 10vh;
- 	margin-right: 10vh;*/
-	/*width: 20%;
-	height: auto;*/
+}
+
+.skills{
+	color: #107896;
+	font-family: 'Yanone Kaffeesatz';
 }
