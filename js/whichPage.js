@@ -100,7 +100,7 @@ function LoadData(fileName){
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		var str = JSON.stringify($(result));
     		//var cont = ($(result).find('head')).html(); 
-    		aler("html " + str);
+    		alert("html " + str);
     		var head = str.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
         }});
