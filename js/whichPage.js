@@ -111,7 +111,12 @@ function LoadData(fileName){
 	    		//var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 	    		//var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
 
-	    		var title0 = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+	    		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+
+	    		//title0 = title0.replace(/<title[^>]*>([^<]+)<\/title>/);
+
+	    		var doc = $($.parseXML(title));
+				var text = doc.find('title').text();
 	    		//var title1 = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
 
 
@@ -124,8 +129,8 @@ function LoadData(fileName){
 				//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
 
 				//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-				document.getElementsByTagName('title')[0].innerHTML = title0;
-				alert(title0);
+				document.getElementsByTagName('title')[0].innerHTML = text;
+				alert(text);
 
 			$(result).find("title").text();
 			$('#containerDiv').html($(result).find('#contentDiv'));
