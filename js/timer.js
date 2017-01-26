@@ -1,0 +1,25 @@
+var myDelay = 1000;
+var thisDelay = 1000;
+var start = Date.now();
+var i = 0;
+
+function startTimer() {    
+    setTimeout(function() {
+        // your code here...
+        i++;
+        console.log(i);
+        if(document.getElementById('time')){
+        	var time = document.getElementById('time');
+        	time.innerHTML = i;
+        };
+        // calculate the actual number of ms since last time
+        var actual = Date.now() - start;
+        // subtract any extra ms from the delay for the next cycle
+        thisDelay = myDelay - (actual - myDelay);
+        start = Date.now();
+        // start the timer again
+        startTimer();
+    }, thisDelay);
+}
+
+startTimer();
