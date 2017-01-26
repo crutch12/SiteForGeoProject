@@ -126,9 +126,9 @@ function LoadData(fileName){
 			var title = $(result).find('title');
 			alert(title);
 
-			var Htmlinner = ($(result).find('title')).html().innerHTML;
+			var Htmlinner = $(result).find('title').html();
 			alert(Htmlinner);
-			
+
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
