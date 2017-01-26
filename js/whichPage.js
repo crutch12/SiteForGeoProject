@@ -100,8 +100,8 @@ function LoadData(fileName){
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		//var str = JSON.stringify($(result).find('#contentDiv'));
     		//var data = JSON.parse($("#contentDiv").html());
-    		var cont = ($(result).find('#head')).html();
-    		alert("head " + cont);
+    		var cont = ($(result)).html();
+    		alert(cont);
         }});
 
     // document.getElementsByTagName("body")[0].reload();
