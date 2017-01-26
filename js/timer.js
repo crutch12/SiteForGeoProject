@@ -16,7 +16,7 @@ function Tic(seconds, time){
 
         ShowTime(seconds, time);
 
-        Tic();
+        Tic(seconds, time);
     }, 60);
 }
 
