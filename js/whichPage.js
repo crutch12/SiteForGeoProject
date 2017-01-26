@@ -100,11 +100,14 @@ function LoadData(fileName){
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		var str = JSON.stringify(result);
     		alert("html " + str);
-    		var head = str.match(/<head[^>]*>[\s\S]*<\/head>/gi);
+
+    		var html = str.replace(/[\n\t\r]/g,"");
+			alert("without n t " + html);
+
+    		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
 
-			var html = head.replace(/[\n\t\r]/g,"");
-			alert(html);
+			
         }});
 
     // document.getElementsByTagName("body")[0].reload();
