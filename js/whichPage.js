@@ -97,8 +97,8 @@ function LoadData(fileName){
     $.ajax({url: fileName, success: function(result){
             //$("#containerDiv").html(result);
     		//$('#head').html($(result).find('#head'));
-    		$('#containerDiv').html($(result).find('#contentDiv'));
-    		var str = JSON.stringify(result);
+    		//$('#containerDiv').html($(result).find('#contentDiv'));
+    		var str = JSON.stringify($(result).find('#head'));
     		alert(str);
         }});
 
