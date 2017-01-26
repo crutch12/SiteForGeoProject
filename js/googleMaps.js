@@ -9,36 +9,10 @@ function initMap() {
     zoom: 10
   });
 
-
-//         google.maps.event.addListenerOnce(map, 'idle', function(){
-//   preloader.classList.add('collapse');
-//   mapscaler.classList.remove('collapsed');
-// });
-
         google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
   preloader.classList.add('collapse');
   mapscaler.classList.remove('collapsed');
 });
-
-//         google.maps.event.addListenerOnce(map, 'tilesloaded', function(){
-//     google.maps.event.addListenerOnce(map, 'idle', function(){
-//         preloader.classList.add('collapse');
-//   mapscaler.classList.remove('collapsed');
-//     });
-// });
-
-//         map.addEventListener('google-map-ready', function(e) {
-//    preloader.classList.add('collapse');
-//   mapscaler.classList.remove('collapsed');
-// });
-
-    //     GEvent.addListener(map, "tilesloaded", function() {
-    //   console.log("Map is fully loaded");
-    // });
-
-
-  
-
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {

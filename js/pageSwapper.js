@@ -65,14 +65,12 @@ $(document).ready(function() {
             }
         });
 
-        // А вот так просто меняется ссылка
         if(url != window.location){
             window.history.pushState(null, null, url);
         }
 
         WhichPage();
 
-        // Предотвращаем дефолтное поведение
         return false;
     });
 });

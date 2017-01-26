@@ -7,67 +7,37 @@ height: 100%;
 }
 
 .big{
-	/*margin-left: calc(50%);
+position: fixed;
+width: 200px;
+height: 200px;
 
-
-      -webkit-transition: -webkit-transform .5s ease-in-out;
-          transition:         transform .5s ease-in-out;*/
-
-
-    /*margin-right: auto;*/
-/*margin-top: 50%;*/
-    /*transform: translate(-50%, -350%);*/
-
-    position: fixed;
-	width: 200px;
-	height: 200px;
-
-animation-name: rotationBig; /*Имя анимации. Немного ниже мы создадим анимацию с этим именем. Не сделайте их разными, иначе не заработает.*/
-animation-duration: 2s; /*Задаем продолжительность одного цикла анимации.*/
-animation-iteration-count: infinite; /*Задаем количество повторений цикла, в нашем случае — бесконечность.*/
-animation-timing-function: linear; /*Ну и указываем плавный тип анимации.*/
+animation-name: rotationBig;
+animation-duration: 2s;
+animation-iteration-count: infinite; 
+animation-timing-function: linear; 
 }
 
 .little{
+position: fixed;
+width: 140px;
+height: 140px;
 
-	position: fixed;
-	width: 140px;
-	height: 140px;
+margin-top: 30px;
+margin-left: 30px;
 
-	margin-top: 30px;
-	margin-left: 30px;
-	/*margin-left: calc(50%);
-
-
-      -webkit-transition: -webkit-transform .5s ease-in-out;
-          transition:         transform .5s ease-in-out;*/
-
-
-    /*margin-right: auto;*/
-/*margin-top: 50%;*/
-    /*transform: translate(-50%, -350%);*/
-
-animation-name: rotationLittle; /*Имя анимации. Немного ниже мы создадим анимацию с этим именем. Не сделайте их разными, иначе не заработает.*/
-animation-duration: 4s; /*Задаем продолжительность одного цикла анимации.*/
-animation-iteration-count: infinite; /*Задаем количество повторений цикла, в нашем случае — бесконечность.*/
-animation-timing-function: linear; /*Ну и указываем плавный тип анимации.*/
+animation-name: rotationLittle;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
 }
 
-/*.preloader:hover{
-	-ms-transform: rotate(360deg); 
-    -webkit-transform: rotate(360deg); 
-    transform: rotate(360deg);
-}*/
-
-@keyframes rotationBig { /*Создаем ключевые кадры для анимации с именем «rotation».*/
-0% {transform:rotate(0deg);} /*Старт цикла, картинка повернута на 0 градусов о.О*/
-100% {transform:rotate(360deg);} /*Конец цикла, картинка повернута на 360 градусов, т.е. ее полный оборот.*/
+@keyframes rotationBig { 
+0% {transform:rotate(0deg);} 
+100% {transform:rotate(360deg);} 
 } 
 
-@keyframes rotationLittle { /*Создаем ключевые кадры для анимации с именем «rotation».*/
-0% {transform:rotate(0deg);} /*Старт цикла, картинка повернута на 0 градусов о.О*/
-100% {transform:rotate(360deg);} /*Конец цикла, картинка повернута на 360 градусов, т.е. ее полный оборот.*/
-} 
+@keyframes rotationLittle { 
+0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);} } 
 
 .preloader{
 position: absolute;
@@ -77,7 +47,6 @@ transform: translate(-50%, -50%);
 width: 200px;
 height: 200px;
 z-index: 10;
-/*background-color: black;*/
 }
 
 .collapsed{
@@ -87,7 +56,3 @@ z-index: 10;
 .mapContainer{
 position:relative;
 }
-
-/*.thumbnail{
-	position:relative;
-}*/
