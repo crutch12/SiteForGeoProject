@@ -101,35 +101,25 @@ function LoadData(fileName){
     		
 
     		var str = JSON.stringify(result);
-    		/*  //alert("html " + str);
+    		//alert("html " + str);
 
     		//var html = str.replace(/[\n\t\r]/g,"");
 
 			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
 			//alert("without n t " + html);
 
-    		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
+    		//var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
     		var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
 
-    		var newTitle = title.toString().replace(/<title>|<\/title>/, "");
+    		//var newTitle = title.toString().replace(/<title>|<\/title>/, "");
 
-    		alert(newTitle);
+    		//alert(newTitle);
 			//alert("head " + head);
 			//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
 
 			//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-			document.getElementsByTagName('title')[0].innerHTML = newTitle;  */
-
-			// var inner = ($(result).find('#contentDiv')).innerHTML;
-			// alert(inner);
-
-			// var title = $(result).find('#contentDiv');
-			// alert(title);
-
-			// var Htmlinner = $(result).find('tit').html();
-			// alert(Htmlinner);
-
-			$('title').html($(result).find('title'));
+			document.getElementsByTagName('title')[0].innerHTML = title;
+			alert(title);
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
