@@ -52,7 +52,7 @@ function WhichPage(){
 
 			var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
 			//alert(lastname);
-			//LoadData(lastname);
+			LoadData(lastname);
 
 
 
@@ -64,7 +64,7 @@ WhichPage();
 
 //var currentMenuItem = document.getElementById("mainDiv");
 
-// function LoadData(fileName){
+function LoadData(fileName){
 	// var request = new XMLHttpRequest();
 	// request.open('GET', fileName);
 	// request.onreadystatechange = function() {
@@ -94,55 +94,33 @@ WhichPage();
 //   alert( "Load contentDiv was performed." );
 // });
 
-   //  $.ajax({url: fileName, success: function(result){
-   //          //$("#containerDiv").html(result);
-   //  		//$('#head').html($(result).find('#head'));
+    $.ajax({url: fileName, success: function(result){
+            //$("#containerDiv").html(result);
+    		//$('#head').html($(result).find('#head'));
     		
     		
 
-   //  		var str = JSON.stringify(result);
-   //  		//alert("html " + str);
+    		var str = JSON.stringify(result);
+    		//alert("html " + str);
 
-   //  		//var html = str.replace(/[\n\t\r]/g,"");
+    		//var html = str.replace(/[\n\t\r]/g,"");
 
-			// var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
-			// //alert("without n t " + html);
+			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
+			//alert("without n t " + html);
 
-   //  		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
-			// //alert("head " + head);
+    		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
+			//alert("head " + head);
 
-			// var oldHead = document.getElementsByTagName('head')[0].innerHTML;
-			// document.getElementsByTagName('head')[0].innerHTML += head;
-
-			// $('#containerDiv').html($(result).find('#contentDiv'));
-   //      }});
-
-
-    $(document).ready(function() {
-    $('a').click(function() {
-        var url = $(this).attr('href');
-
-        $.ajax({
-            url:     url + '?ajax=1',
-            success: function(data){
-                $('#containerDiv').html(data);
-            }
-        });
-
-        // А вот так просто меняется ссылка
-        if(url != window.location){
-            window.history.pushState(null, null, url);
-        }
-
-        // Предотвращаем дефолтное поведение
-        return false;
-    });
-});
+			var oldHead = document.getElementsByTagName('head')[0].innerHTML;
+			document.getElementsByTagName('head')[0].innerHTML += head;
+			
+			$('#containerDiv').html($(result).find('#contentDiv'));
+        }});
 
     // document.getElementsByTagName("body")[0].reload();
 	//var str = "Mr Blue has \n \t \n \t a blue house and a blue car";
 	// var res = str.replace(/\n|\t/gi, "aaa");
-// }
+}
 
 
 
