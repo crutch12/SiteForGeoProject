@@ -100,31 +100,34 @@ function LoadData(fileName){
     		
     		
 
-	   //  		var str = JSON.stringify(result);
-	   //  		//alert("html " + str);
+	    		var str = JSON.stringify(result);
+	    		//alert("html " + str);
 
-	   //  		//var html = str.replace(/[\n\t\r]/g,"");
+	    		//var html = str.replace(/[\n\t\r]/g,"");
 
-				// var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
-				// //alert("without n t " + html);
+				var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
+				//alert("without n t " + html);
 
-	   //  		//var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
-	   //  		var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
+	    		//var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
+	    		//var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
 
-	   //  		var besttitle = $.parseHTML( title.toString() );
+	    		var title0 = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+	    		//var title1 = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
 
-	   //  		//var newTitle = title.toString().replace(/<title>|<\/title>/, "");
 
-	   //  		//alert(newTitle);
-				// //alert("head " + head);
-				// //var oldHead = document.getElementsByTagName('head')[0].innerHTML;
+	    		//var besttitle = $.parseHTML( title.toString() );
 
-				// //document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-				// document.getElementsByTagName('title')[0].innerHTML = besttitle.innerHTML;
-				// alert(besttitle.innerHTML);
+	    		//var newTitle = title.toString().replace(/<title>|<\/title>/, "");
 
-			var title = $(result).find("title").text();
-			alert(title);
+	    		//alert(newTitle);
+				//alert("head " + head);
+				//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
+
+				//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
+				document.getElementsByTagName('title')[0].innerHTML = title0;
+				alert(title0);
+
+			$(result).find("title").text();
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
