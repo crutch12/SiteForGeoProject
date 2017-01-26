@@ -111,7 +111,7 @@ function LoadData(fileName){
     		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
     		var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
 
-    		var newTitle = title.toString().replace(/\<title\>|\<\/title\>/, "");
+    		var newTitle = title.toString().replace(/<title>|<\/title> /, "");
 
     		alert(newTitle);
 			//alert("head " + head);
