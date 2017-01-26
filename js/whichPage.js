@@ -24,7 +24,7 @@ function WhichPage(){
 				links[i].parentElement.classList.add(specName);
 				//links[i].style.backgroundColor = 'yellow';
 				}else{
-					//links[i].parentElement.classList.remove(specName);
+					links[i].parentElement.classList.remove(specName);
 				}
 			}
 		}
@@ -59,6 +59,8 @@ function WhichPage(){
             }
      }          
 }
+
+WhichPage();
 
 // function LoadData(url){
 
