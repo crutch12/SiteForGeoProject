@@ -96,9 +96,9 @@ function LoadData(fileName){
 
     $.ajax({url: fileName, success: function(result){
             //$("#containerDiv").html(result);
-    		$('#head').html($(result).find('#head'));
+    		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
-    		alert(fileName + " was performed");
+    		alert(fileName + " was performed (without head and content)");
         }});
 
     // document.getElementsByTagName("body")[0].reload();
