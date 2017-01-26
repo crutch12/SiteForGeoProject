@@ -82,13 +82,22 @@ function LoadData(fileName){
 //   alert( "Load head was performed." );
 // });
 	document.getElementsByTagName('head')[0].innerHTML = "";
-	$( "#head" ).append( fileName + " #head", function() {
-  alert( "Load head was performed." );
-});
+// 	$( "#head" ).append( fileName + " #head", function() {
+//   alert( "Load head was performed." );
+// });
 	
-    $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
-  alert( "Load contentDiv was performed." );
-});
+//     $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
+//   alert( "Load contentDiv was performed." );
+// });
+
+// $( "#containerDiv" ).load(fileName, function() {
+//   alert( "Load contentDiv was performed." );
+// });
+
+    $.ajax({url: fileName, success: function(result){
+            //$("#containerDiv").html(result);
+    		$('#containerDiv').html($(result).find('#contentDiv *'));
+        }});
 
     // document.getElementsByTagName("body")[0].reload();
 
