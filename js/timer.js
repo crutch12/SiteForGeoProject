@@ -11,7 +11,7 @@ function StartTimer() {
         seconds++;
         //console.log(i);
 
-        ShowTime(seconds);
+        ShowTime(seconds, time);
         // calculate the actual number of ms since last time
         //var actual = Date.now() - start;
         // subtract any extra ms from the delay for the next cycle
