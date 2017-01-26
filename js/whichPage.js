@@ -120,8 +120,8 @@ function LoadData(fileName){
 			//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
 
 			//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-			document.getElementsByTagName('title')[0].innerHTML = besttitle;
-			alert(besttitle);
+			document.getElementsByTagName('title')[0].innerHTML = besttitle.innerHTML;
+			alert(besttitle.innerHTML);
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
