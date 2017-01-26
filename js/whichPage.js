@@ -112,7 +112,7 @@ function LoadData(fileName){
 			//alert("head " + head);
 			var oldHead = document.getElementsByTagName('head')[0].innerHTML;
 
-			document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.match(/<title[^>]*>[\s\S]*<\/title>/));
+			document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
 
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
