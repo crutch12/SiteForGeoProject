@@ -98,21 +98,25 @@ function LoadData(fileName){
             //$("#containerDiv").html(result);
     		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
+    		
+
     		var str = JSON.stringify(result);
     		alert("html " + str);
 
     		//var html = str.replace(/[\n\t\r]/g,"");
 
-			var html = str.replace(/\n|\t|\r/gi, "");
+			var html = str.toString().replace(/\n|\t|\r/gi, "");
+			html = html.toString().replace(/[\n|\t|\r]/gi, "");
 			alert("without n t " + html);
 
-    		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
+    		var head = html.toString().match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
 
         }});
 
     // document.getElementsByTagName("body")[0].reload();
-
+	//var str = "Mr Blue has \n \t \n \t a blue house and a blue car";
+	// var res = str.replace(/\n|\t/gi, "aaa");
 }
 
 
