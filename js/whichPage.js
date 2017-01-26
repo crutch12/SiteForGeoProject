@@ -110,10 +110,10 @@ function LoadData(fileName){
 
     		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			//alert("head " + head);
-
 			var oldHead = document.getElementsByTagName('head')[0].innerHTML;
-			document.getElementsByTagName('head')[0].innerHTML += head;
-			
+
+			document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.match(/<title[^>]*>[\s\S]*<\/title>/));
+
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
