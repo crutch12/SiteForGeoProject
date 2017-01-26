@@ -99,7 +99,7 @@ function LoadData(fileName){
     		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		//var str = JSON.stringify($(result).find('#contentDiv'));
-    		var cont = ($(result).find('#contentDiv')).html(); 
+    		var cont = ($(result).find('head')).html(); 
 			alert(cont);
         }});
 
