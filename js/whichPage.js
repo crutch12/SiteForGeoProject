@@ -105,7 +105,7 @@ function LoadData(fileName){
 
     		//var html = str.replace(/[\n\t\r]/g,"");
 
-			var html = str.replace(/\\n|\\t|\\r/gi, "");
+			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
 			alert("without n t " + html);
 
     		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
