@@ -88,7 +88,7 @@ $(document).ready(function() {
         $.ajax({
             url:     url + '?ajax=1',
             success: function(data){
-                $('#contentDiv').html(data);
+                $('#containerDiv').html($(data).find('#contentDiv'));
             }
         });
 
@@ -106,7 +106,7 @@ $(window).bind('popstate', function() {
     $.ajax({
         url:     location.pathname + '?ajax=1',
         success: function(data) {
-            $('#containerDiv').html(data);
+            $('#containerDiv').html($(data).find('#contentDiv'));
         }
     });
 });
