@@ -50,9 +50,9 @@ function WhichPage(){
 					}
 				}
 
-			var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
+			//var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
 			//alert(lastname);
-			LoadData(lastname);
+			LoadData(THref.href);
 
 
 
@@ -62,88 +62,19 @@ function WhichPage(){
 
 WhichPage();
 
-//var currentMenuItem = document.getElementById("mainDiv");
+function LoadData(url){
 
-function LoadData(fileName){
-	// var request = new XMLHttpRequest();
-	// request.open('GET', fileName);
-	// request.onreadystatechange = function() {
-	//     if (request.readyState == 4) {
-	//         if (request.status == 200) {
-	//             currentMenuItem.innerHTML = request.responseText;
-	//         } else {
-	//             alert('Сетевая ошибка, код: ' + request.status);
-	//         }
-	//     }
-	// };
-	// request.send(null);
-
-//     $( "#containerHead" ).load( "map.html #head", function() {
-//   alert( "Load head was performed." );
-// });
-	//document.getElementsByTagName('head')[0].innerHTML = "";
-// 	$( "#head" ).append( fileName + " #head", function() {
-//   alert( "Load head was performed." );
-// });
-	
-//     $( "#containerDiv" ).load( fileName + " #contentDiv", function() {
-//   alert( "Load contentDiv was performed." );
-// });
-
-// $( "#containerDiv" ).load(fileName, function() {
-//   alert( "Load contentDiv was performed." );
-// });
+	var fileName = url.substr(THref.href.lastIndexOf('#') + 1);
 
     $.ajax({url: fileName, success: function(result){
-            //$("#containerDiv").html(result);
-    		//$('#head').html($(result).find('#head'));
-    		
-    		
 
-	    		var str = JSON.stringify(result);
-	    		//alert("html " + str);
+    		var str = JSON.stringify(result);
+			var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
+    		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
+    		var doc = $($.parseXML(title));
+			var textTitle = doc.find('title').text();
+			document.getElementsByTagName('title')[0].innerHTML = textTitle;
 
-	    		//var html = str.replace(/[\n\t\r]/g,"");
-
-				var html = str.replace(/\\n|\\t|\\r|\\\u0022/gi, "");
-				//alert("without n t " + html);
-
-	    		//var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
-	    		//var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
-
-	    		var title = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
-
-	    		//title0 = title0.replace(/<title[^>]*>([^<]+)<\/title>/);
-
-	    		var doc = $($.parseXML(title));
-				var text = doc.find('title').text();
-	    		//var title1 = html.match(/<title[^>]*>([^<]+)<\/title>/)[0];
-
-
-	    		//var besttitle = $.parseHTML( title.toString() );
-
-	    		//var newTitle = title.toString().replace(/<title>|<\/title>/, "");
-
-	    		//alert(newTitle);
-				//alert("head " + head);
-				//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
-
-				//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-				document.getElementsByTagName('title')[0].innerHTML = text;
-				alert(text);
-
-			$(result).find("title").text();
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
-
-    // document.getElementsByTagName("body")[0].reload();
-	//var str = "Mr Blue has \n \t \n \t a blue house and a blue car";
-	// var res = str.replace(/\n|\t/gi, "aaa");
 }
-
-
-
-// var url = document.createElement('a');
-// url.href = location.pathname;
-// alert(url.pathname + url.search);
-//}
