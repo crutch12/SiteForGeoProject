@@ -60,8 +60,6 @@ function WhichPage(){
      }          
 }
 
-WhichPage();
-
 // function LoadData(url){
 
 // 	var fileName = url.substr(url.lastIndexOf('#') + 1);
@@ -96,6 +94,8 @@ $(document).ready(function() {
         if(url != window.location){
             window.history.pushState(null, null, url);
         }
+
+        WhichPage();
 
         // Предотвращаем дефолтное поведение
         return false;
