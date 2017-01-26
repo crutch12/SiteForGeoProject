@@ -1,6 +1,5 @@
 .mapscaler {
 height: 80vh;
-position:relative;
 }
 
 #map {
@@ -88,6 +87,10 @@ z-index: 10;
 
 .collapsed{
  visibility: collapse;
+}
+
+.mapContainer{
+position:relative;
 }
 
 /*.thumbnail{
