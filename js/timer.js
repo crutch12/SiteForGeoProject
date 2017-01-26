@@ -1,13 +1,16 @@
-var myDelay = 1000;
-var thisDelay = 1000;
 var start = Date.now();
-var i = 0;
+var seconds;
+var time;
 
-function startTimer() {    
+function StartTimer() {    
+	seconds = Math.floor((Date.now() - start) / 1000);
+
+	ShowTime();
+
     setTimeout(function() {
 
-        i++;
-        console.log(i);
+        seconds++;
+        //console.log(i);
 
         ShowTime();
         // calculate the actual number of ms since last time
@@ -17,15 +20,13 @@ function startTimer() {
         //start = Date.now();
         // start the timer again
 
-        startTimer();
-    }, 1000);
+        StartTimer();
+    }, 60);
 }
 
-startTimer();
+//startTimer();
 
 function ShowTime(){
-        if(document.getElementById('time')){
-        	var time = document.getElementById('time');
-        	time.innerHTML = i;
-        };
+      	time = document.getElementById('time');
+		time.innerHTML = seconds;  
 }
