@@ -99,10 +99,12 @@ function LoadData(fileName){
     		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
     		var str = JSON.stringify(result);
-    		//var cont = ($(result).find('head')).html(); 
     		alert("html " + str);
     		var head = str.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
+
+			var html = $.parseHTML(head);
+			alert(html);
         }});
 
     // document.getElementsByTagName("body")[0].reload();
