@@ -101,7 +101,7 @@ function LoadData(fileName){
     		
 
     		var str = JSON.stringify(result);
-    		//alert("html " + str);
+    		/*  //alert("html " + str);
 
     		//var html = str.replace(/[\n\t\r]/g,"");
 
@@ -111,14 +111,24 @@ function LoadData(fileName){
     		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
     		var title = html.match(/<title[^>]*>[\s\S]*<\/title>/gi);
 
-    		var newTitle = title.toString().replace(/<title>|<\/title> /, "");
+    		var newTitle = title.toString().replace(/<title>|<\/title>/, "");
 
     		alert(newTitle);
 			//alert("head " + head);
 			//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
 
 			//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-			document.getElementsByTagName('title')[0].innerHTML = newTitle;
+			document.getElementsByTagName('title')[0].innerHTML = newTitle;  */
+
+			var inner = ($(result).find('title')).innerHTML;
+			alert(inner);
+
+			var title = $(result).find('title');
+			alert(title);
+
+			var Htmlinner = ($(result).find('title')).html().innerHTML;
+			alert(Htmlinner);
+			
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
 
