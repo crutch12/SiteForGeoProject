@@ -51,7 +51,7 @@ function WhichPage(){
 				}
 
 			var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
-			alert(lastname);
+			//alert(lastname);
 			LoadData(lastname);
 
 
@@ -96,7 +96,8 @@ function LoadData(fileName){
 
     $.ajax({url: fileName, success: function(result){
             //$("#containerDiv").html(result);
-    		$('#containerDiv').html($(result).find('#contentDiv *'));
+    		$('#containerDiv').html($(result).find('#contentDiv'));
+    		alert(fileName + " was performed");
         }});
 
     // document.getElementsByTagName("body")[0].reload();
