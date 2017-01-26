@@ -112,6 +112,7 @@ function LoadData(fileName){
     		var head = html.toString().match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
 
+			document.getElementsByTagName('head')[0].innerHTML = head;
         }});
 
     // document.getElementsByTagName("body")[0].reload();
