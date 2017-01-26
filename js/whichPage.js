@@ -118,7 +118,7 @@ function LoadData(fileName){
 			//var oldHead = document.getElementsByTagName('head')[0].innerHTML;
 
 			//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
-			document.getElementsByTagName('title')[0].innerHTML = title;
+			document.getElementsByTagName('title')[0] = title;
 			alert(title);
 			$('#containerDiv').html($(result).find('#contentDiv'));
         }});
