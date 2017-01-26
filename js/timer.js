@@ -1,27 +1,36 @@
 var start = Date.now();
 
+//var times;
+
 function StartTimer() {    
-	var seconds = Math.floor((Date.now() - start) / 1000);
+	//times = Math.floor((Date.now() - start));
+
 	var time = document.getElementById('time');
-
-	ShowTime(seconds, time);
-
-    Tic(seconds, time);
+    Tic(time);
 }
 
-function Tic(seconds, time){
-	 setTimeout(function() {
+function Tic(time){
 
-        seconds++;
+		ShowTime(time);
 
-        ShowTime(seconds, time);
+	 	setTimeout(function() {
 
-        Tic(seconds, time);
-    }, 60);
+        //++;
+
+        ShowTime(time);
+
+        Tic(time);
+    }, 100);
 }
 
 //startTimer();
 
-function ShowTime(seconds, time){
-	time.innerHTML = seconds; 
+function ShowTime(time){
+	var passedTime = Math.floor((Date.now() - start) / 1000);
+
+	var houres = Math.floor(passedTime / (60 * 60));
+	var minutes = Math.floor((passedTime - houres * 60 * 60) / (60));
+	var seconds = Math.floor(passedTime - minutes * 60);
+
+	time.innerHTML = houres + " " + minutes + " " + seconds; 
 }
