@@ -52,7 +52,7 @@ function WhichPage(){
 
 			var lastname = THref.href.substr(THref.href.lastIndexOf('#') + 1);
 			//alert(lastname);
-			LoadData(lastname);
+			//LoadData(lastname);
 
 
 
