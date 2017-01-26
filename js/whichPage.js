@@ -82,7 +82,7 @@ WhichPage();
 // }
 
 $(document).ready(function() {
-    $('li').click(function() {
+    $('a').click(function() {
         var url = $(this).attr('href');
 
         $.ajax({
