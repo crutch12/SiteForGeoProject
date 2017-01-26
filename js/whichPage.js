@@ -120,13 +120,13 @@ function LoadData(fileName){
 			//document.getElementsByTagName('head')[0].innerHTML.replace(oldHead.match(/<title[^>]*>[\s\S]*<\/title>/), head.toString().match(/<title[^>]*>[\s\S]*<\/title>/));
 			document.getElementsByTagName('title')[0].innerHTML = newTitle;  */
 
-			var inner = ($(result).find('title')).innerHTML;
+			var inner = ($(result).find('contentDiv')).innerHTML;
 			alert(inner);
 
-			var title = $(result).find('title');
+			var title = $(result).find('contentDiv');
 			alert(title);
 
-			var Htmlinner = $(result).find('title').html();
+			var Htmlinner = $(result).find('contentDiv').html();
 			alert(Htmlinner);
 
 			$('#containerDiv').html($(result).find('#contentDiv'));
