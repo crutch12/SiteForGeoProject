@@ -105,11 +105,11 @@ function LoadData(fileName){
 
     		//var html = str.replace(/[\n\t\r]/g,"");
 
-			var html = str.toString().replace(/\n|\t|\r/gi, "");
-			html = html.toString().replace(/[\n|\t|\r]/gi, "");
-			alert("without n t " + html);
+			// var html = str.toString().replace(/\n|\t|\r/gi, "");
+			// html = html.toString().replace(/[\n|\t|\r]/gi, "");
+			// alert("without n t " + html);
 
-    		var head = html.toString().match(/<head[^>]*>[\s\S]*<\/head>/gi);
+    		var head = str.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
 
 			document.getElementsByTagName('head')[0].innerHTML = head;
