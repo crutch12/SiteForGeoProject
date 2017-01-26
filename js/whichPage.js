@@ -103,7 +103,7 @@ function LoadData(fileName){
     		var head = str.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
 
-			var html = $.parseHTML(head);
+			var html = head.replace(/[\n\t\r]/g,"");
 			alert(html);
         }});
 
