@@ -101,13 +101,14 @@ function LoadData(fileName){
     		var str = JSON.stringify(result);
     		alert("html " + str);
 
-    		var html = str.replace(/[\n\t\r]/g,"");
+    		//var html = str.replace(/[\n\t\r]/g,"");
+
+			var html = str.replace(/\n|\t|\r/gi, "");
 			alert("without n t " + html);
 
     		var head = html.match(/<head[^>]*>[\s\S]*<\/head>/gi);
 			alert("head " + head);
 
-			
         }});
 
     // document.getElementsByTagName("body")[0].reload();
