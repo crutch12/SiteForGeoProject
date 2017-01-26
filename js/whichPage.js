@@ -98,9 +98,10 @@ function LoadData(fileName){
             //$("#containerDiv").html(result);
     		//$('#head').html($(result).find('#head'));
     		//$('#containerDiv').html($(result).find('#contentDiv'));
-    		//var str = JSON.stringify($(result).find('#contentDiv'));
-    		var cont = ($(result).find('head')).html(); 
-			alert(cont);
+    		var str = JSON.stringify($(result));
+    		//var cont = ($(result).find('head')).html(); 
+    		var head = str.match(/<head[^>]*>[\s\S]*<\/head>/gi);
+			alert("head" + head);
         }});
 
     // document.getElementsByTagName("body")[0].reload();
