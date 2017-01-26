@@ -11,14 +11,14 @@ function startTimer() {
 
         ShowTime();
         // calculate the actual number of ms since last time
-        var actual = Date.now() - start;
+        //var actual = Date.now() - start;
         // subtract any extra ms from the delay for the next cycle
-        thisDelay = myDelay - (actual - myDelay);
-        start = Date.now();
+        //thisDelay = myDelay - (actual - myDelay);
+        //start = Date.now();
         // start the timer again
 
         startTimer();
-    }, thisDelay);
+    }, 1000);
 }
 
 startTimer();
