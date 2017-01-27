@@ -52,7 +52,7 @@ $(document).ready(function() {
 	         WhichPage();
     $('a').click(function() {
         var url = $(this).attr('href');
-
+        WhichPage();
         $.ajax({
             url:     url + '?ajax=1',
             success: function(result){
@@ -76,7 +76,7 @@ $(document).ready(function() {
 });
 
 $(window).bind('popstate', function() {
-	            
+	                        WhichPage();
     $.ajax({
         url:     location.pathname + '?ajax=1',
         success: function(result) {
@@ -87,8 +87,6 @@ $(window).bind('popstate', function() {
 			var textTitle = doc.find('title').text();
 			document.getElementsByTagName('title')[0].innerHTML = textTitle;
             $('#containerDiv').html($(result).find('#contentDiv'));
-
-            WhichPage();
         }
         
     });
