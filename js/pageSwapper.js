@@ -13,6 +13,13 @@ function WhichPage(){
 	var specName = 'active';
 	alert(pageName);
 	if (!pageName){
+
+		for(var i=0; i<count; i++){
+			if(links[i].href == THref){
+					links[i].parentElement.classList.remove(specName);
+			}
+		}
+
 	var mainPage = document.getElementById('mainPage');
 	mainPage.classList.add(specName);
 	}else{
