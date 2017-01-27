@@ -51,8 +51,6 @@ function WhichPage(){
      }          
 }
 
-//WhichPage();
-
 $(document).ready(function() {
 	         WhichPage();
     $('a').click(function() {
@@ -74,7 +72,7 @@ $(document).ready(function() {
         if(url != window.location){
             window.history.pushState(null, null, url);
         }
-        WhichPage();
+        //WhichPage();
 
         return false;
     });
