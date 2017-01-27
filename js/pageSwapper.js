@@ -76,7 +76,7 @@ $(document).ready(function() {
 });
 
 $(window).bind('popstate', function() {
-	            WhichPage();
+	            
     $.ajax({
         url:     location.pathname + '?ajax=1',
         success: function(result) {
@@ -88,6 +88,7 @@ $(window).bind('popstate', function() {
 			document.getElementsByTagName('title')[0].innerHTML = textTitle;
             $('#containerDiv').html($(result).find('#contentDiv'));
 
+            WhichPage();
         }
         
     });
