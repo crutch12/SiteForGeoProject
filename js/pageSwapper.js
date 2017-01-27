@@ -46,9 +46,10 @@ function WhichPage(){
  //     }          
 }
 
-WhichPage();
+//WhichPage();
 
 $(document).ready(function() {
+	WhichPage();
     $('a').click(function() {
         var url = $(this).attr('href');
 
@@ -69,7 +70,6 @@ $(document).ready(function() {
             window.history.pushState(null, null, url);
         }
 
-        WhichPage();
 
         return false;
     });
@@ -90,5 +90,4 @@ $(window).bind('popstate', function() {
         }
         
     });
-    WhichPage();
 });
