@@ -25,25 +25,25 @@ function WhichPage(){
 			}
 		}
      
-	// for(var i = 0; i < k.length; i++){
-	// 	k[i].onclick = function (){
-	// 		THref = this.getElementsByTagName('a')[0];
-	// 		pageName = THref.href.substr(THref.href.lastIndexOf('/') + 1);
+	for(var i = 0; i < k.length; i++){
+		k[i].onclick = function (){
+			THref = this.getElementsByTagName('a')[0];
+			pageName = THref.href.substr(THref.href.lastIndexOf('/') + 1);
 
-	// 		if (!pageName){
-	// 			var mainPage = document.getElementById("mainPage");
-	// 			mainPage.classList.add(specName);
-	// 			}else{
-	// 				for(var i=0; i<count; i++){
-	// 				  	if(links[i].href == THref){
-	// 				  		links[i].parentElement.classList.add(specName);
-	// 					}else{
-	// 						links[i].parentElement.classList.remove(specName);
-	// 					}
-	// 				}
-	// 			}
- //            }
- //     }          
+			if (!pageName){
+				var mainPage = document.getElementById("mainPage");
+				mainPage.classList.add(specName);
+				}else{
+					for(var i=0; i<count; i++){
+					  	if(links[i].href == THref){
+					  		links[i].parentElement.classList.add(specName);
+						}else{
+							links[i].parentElement.classList.remove(specName);
+						}
+					}
+				}
+            }
+     }          
 }
 
 //WhichPage();
@@ -52,7 +52,7 @@ $(document).ready(function() {
 	         WhichPage();
     $('a').click(function() {
         var url = $(this).attr('href');
-        WhichPage();
+
         $.ajax({
             url:     url + '?ajax=1',
             success: function(result){
@@ -69,7 +69,7 @@ $(document).ready(function() {
         if(url != window.location){
             window.history.pushState(null, null, url);
         }
-
+        WhichPage();
 
         return false;
     });
