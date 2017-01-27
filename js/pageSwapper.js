@@ -11,7 +11,6 @@ function WhichPage(){
 
 	var count = links.length;
 	var specName = 'active';
-	alert(pageName);
 	if (!pageName){
 
 		for(var i=0; i<count; i++){
@@ -72,7 +71,7 @@ $(document).ready(function() {
         if(url != window.location){
             window.history.pushState(null, null, url);
         }
-        //WhichPage();
+        WhichPage();
 
         return false;
     });
@@ -94,8 +93,3 @@ $(window).bind('popstate', function() {
         
     });
 });
-
-// $('li').on('click', function(){
-//     $('li').removeClass('active');
-//     $(this).addClass('active');
-// });
