@@ -7,7 +7,7 @@ function WhichPage(){
 	var THref = window.location;
 	// alert(THref);
 	//var pageName = THref.substr(THref.lastIndexOf('/') + 1);
-	var pageName = THref.pathname;
+	var pageName = THref.pathname.substr(THref.pathname.lastIndexOf('/') + 1);
 
 	var k = document.getElementsByTagName("li");
 
