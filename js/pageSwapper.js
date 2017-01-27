@@ -11,7 +11,7 @@ function WhichPage(){
 
 	var count = links.length;
 	var specName = 'active';
-	// alert(pageName);
+	alert(pageName);
 	if (!pageName){
 	var mainPage = document.getElementById('mainPage');
 	mainPage.classList.add(specName);
