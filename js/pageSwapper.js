@@ -13,9 +13,9 @@ function WhichPage(){
 
 	var count = links.length;
 	var specName = 'active';
-
+	alert(pageName);
 	if (!pageName){
-	var mainPage = document.getElementById("mainPage");
+	var mainPage = document.getElementById('mainPage');
 	mainPage.classList.add(specName);
 	}else{
 		for(var i=0; i<count; i++){
