@@ -5,15 +5,13 @@ function WhichPage(){
 	var links =  nav.getElementsByTagName("a");
 
 	var THref = window.location;
-	// alert(THref);
-	//var pageName = THref.substr(THref.lastIndexOf('/') + 1);
 	var pageName = THref.pathname.substr(THref.pathname.lastIndexOf('/') + 1);
 
 	var k = document.getElementsByTagName("li");
 
 	var count = links.length;
 	var specName = 'active';
-	alert(pageName);
+	// alert(pageName);
 	if (!pageName){
 	var mainPage = document.getElementById('mainPage');
 	mainPage.classList.add(specName);
@@ -90,6 +88,7 @@ $(window).bind('popstate', function() {
 			document.getElementsByTagName('title')[0].innerHTML = textTitle;
             $('#containerDiv').html($(result).find('#contentDiv'));
         }
+        
     });
     WhichPage();
 });
