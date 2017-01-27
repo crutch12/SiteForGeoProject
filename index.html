@@ -28,147 +28,117 @@
 
 		<div class="thumbnail" id="containerDiv">
 			<div id="contentDiv">
-				<script>
-function WhichPage(){
-	var nav =  document.getElementById("navigation");
+			<h1><center>Резюме</center></h1>
+				<div class="row">
+					<div class="col-lg-4 col-md-5 col-sm-6">
+						<img src="images/tim_cook.png" class="img-circle image" alt="">
+					</div>
 
-	var links =  nav.getElementsByTagName("a");
+					<div class="col-lg-8 col-md-7 col-sm-6">
 
-	var THref = window.location;
-	var pageName = THref.pathname.substr(THref.pathname.lastIndexOf('/') + 1);
+						<h2>Тим Кук <small>Apple, IBM, Compaq</small></h2>
+						<hr>
 
-	var k = document.getElementsByTagName("li");
+							<p align="justify">Я являюсь генеральным директором Apple с 24 августа 2011 года. Я сменил Стива Джобса, которому пришлось покинуть корпорацию в связи с продолжительной болезнью — раком поджелудочной железы.</p> 
+							<p align="justify">После окончания Обернского университета я 12 лет работал в IBM — дослужился до директора департамента производства и сбыта продукции в Северной и Латинской Америке. Параллельно с работой в IBM я учился в магистратуре Университета Дьюка по направлению "Деловое администрирование". В 1994 году я перешел в торговую компанию Intelligent Electronics, где был исполнительным директором. После продажи компании  Intelligent Electronics в 1997 году я стал вице-президентом компании Compaq.</p> 
+							<p align="justify">В 1998 году Стив Джобс пригласил меня на работу в Apple.</p> 
+							<p align="justify">После смерти Стива я успел выпустить несколько новых iPhone и iPad, а так же Apple Watch. При мне компания внедрила в производство множество инноваций: сканер отпечатков Touch ID, голосовой помощник Siri, дисплей 3D Touch.</p> 
+							
+					</div>
 
-	var count = links.length;
-	var specName = 'active';
-	// alert(pageName);
-	if (!pageName){
-	var mainPage = document.getElementById('mainPage');
-	mainPage.classList.add(specName);
-	}else{
-		for(var i=0; i<count; i++){
-			if(links[i].href == THref){
-				links[i].parentElement.classList.add(specName);
-				}else{
-					links[i].parentElement.classList.remove(specName);
-				}
-			}
-		}        
-}
+				</div>
+				<hr>
 
-WhichPage();
-				</script>
-				<h1><center>Резюме</center></h1>
-					<div class="row">
-						<div class="col-lg-4 col-md-5 col-sm-6">
-							<img src="images/tim_cook.png" class="img-circle image" alt="">
-						</div>
-
-						<div class="col-lg-8 col-md-7 col-sm-6">
-
-							<h2>Тим Кук <small>Apple, IBM, Compaq</small></h2>
-							<hr>
-
-								<p align="justify">Я являюсь генеральным директором Apple с 24 августа 2011 года. Я сменил Стива Джобса, которому пришлось покинуть корпорацию в связи с продолжительной болезнью — раком поджелудочной железы.</p> 
-								<p align="justify">После окончания Обернского университета я 12 лет работал в IBM — дослужился до директора департамента производства и сбыта продукции в Северной и Латинской Америке. Параллельно с работой в IBM я учился в магистратуре Университета Дьюка по направлению "Деловое администрирование". В 1994 году я перешел в торговую компанию Intelligent Electronics, где был исполнительным директором. После продажи компании  Intelligent Electronics в 1997 году я стал вице-президентом компании Compaq.</p> 
-								<p align="justify">В 1998 году Стив Джобс пригласил меня на работу в Apple.</p> 
-								<p align="justify">После смерти Стива я успел выпустить несколько новых iPhone и iPad, а так же Apple Watch. При мне компания внедрила в производство множество инноваций: сканер отпечатков Touch ID, голосовой помощник Siri, дисплей 3D Touch.</p> 
-								
-						</div>
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
 
 					</div>
-					<hr>
-
-					<div class="row">
-						<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
-
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-							<div>
-								<h4 align="right" class="skillName"><em>Образование</em></h4>
-							</div>
-						</div>
-
-						<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
-							<div class="skill">
-								<ul>
-									 <li><b>Auburn University </b><small>1982</small></li>
-									 <li><b>Duke University </b><small>1988</small></li>
-									 <li><b>Fuqua School of Business</b></li>
-									 <li><b>Robertsdale High School</b></li>
-								</ul>
-							</div>
-							<hr>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
+						<div>
+							<h4 align="right" class="skillName"><em>Образование</em></h4>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
-
+					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
+						<div class="skill">
+							<ul>
+								 <li><b>Auburn University </b><small>1982</small></li>
+								 <li><b>Duke University </b><small>1988</small></li>
+								 <li><b>Fuqua School of Business</b></li>
+								 <li><b>Robertsdale High School</b></li>
+							</ul>
 						</div>
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-							<div>
-								<h4 align="right" class="skillName"><em>Опыт работы</em></h4>
-							</div>
-						</div>
+						<hr>
+					</div>
+				</div>
 
-						<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
-							<div class="skill">
-								<ul>
-									 <li><b>IBM </b><small>1982 - 1994</small></li>
-									 <li><b>Intelligent Electronics </b><small>1994 - 1997</small></li>
-									 <li><b>Compaq </b><small>1997 - 1998</small></li>
-									 <li><b>Apple </b><small>1997 - 2017</small></li>
-								</ul>
-							</div>
-							<hr>
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
+
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
+						<div>
+							<h4 align="right" class="skillName"><em>Опыт работы</em></h4>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
-
+					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
+						<div class="skill">
+							<ul>
+								 <li><b>IBM </b><small>1982 - 1994</small></li>
+								 <li><b>Intelligent Electronics </b><small>1994 - 1997</small></li>
+								 <li><b>Compaq </b><small>1997 - 1998</small></li>
+								 <li><b>Apple </b><small>1997 - 2017</small></li>
+							</ul>
 						</div>
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-							<div>
-								<h4 align="right" class="skillName"><em>Навыки</em></h4>
-							</div>
-						</div>
+						<hr>
+					</div>
+				</div>
 
-						<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
-							<div class="skill">
-								<ul>
-									 <li><b>Microsoft Office</b></li>
-									 <li><b>Отлично владею MacOS </b><small>(бывший OS X)</small></li>
-									 <li><b>Умею быть директором</b></li>
-									 <li><b>Отлично держусь на публике</b></li>
-								</ul>
-							</div>
-							<hr>
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
+
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
+						<div>
+							<h4 align="right" class="skillName"><em>Навыки</em></h4>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
-
+					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
+						<div class="skill">
+							<ul>
+								 <li><b>Microsoft Office</b></li>
+								 <li><b>Отлично владею MacOS </b><small>(бывший OS X)</small></li>
+								 <li><b>Умею быть директором</b></li>
+								 <li><b>Отлично держусь на публике</b></li>
+							</ul>
 						</div>
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
-							<div>
-								<h4 align="right" class="skillName"><em>Хобби</em></h4>
-							</div>
-						</div>
+						<hr>
+					</div>
+				</div>
 
-						<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
-							<div class="skill">
-								<ul>
-									 <li><b>Благотворительность</b></li>
-								</ul>
-							</div>
-							<hr>
+				<div class="row">
+					<div class="col-lg-2 col-md-2 col-sm-1 col-xs-0">
+
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-5">
+						<div>
+							<h4 align="right" class="skillName"><em>Хобби</em></h4>
 						</div>
 					</div>
-					
-					
+
+					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
+						<div class="skill">
+							<ul>
+								 <li><b>Благотворительность</b></li>
+							</ul>
+						</div>
+						<hr>
+					</div>
+				</div>
+				
+				
 			</div>
 		</div>
 	</div>
