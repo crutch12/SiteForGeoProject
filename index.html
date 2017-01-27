@@ -17,9 +17,9 @@
 		<div>
 
 			<ul class="nav nav-pills nav-justified" id ="navigation">
-			  <li role="presentation" id="mainPage"><a href="index.html"">Резюме</a></li>
-			  <li role="presentation"><a href="map.html"">Карта</a></li>
-			  <li role="presentation"><a href="timer.html"">Таймер</a></li>
+			  <li role="presentation" id="mainPage"><a href="index.html">Резюме</a></li>
+			  <li role="presentation"><a href="map.html">Карта</a></li>
+			  <li role="presentation"><a href="timer.html">Таймер</a></li>
 			</ul>
 
 		</div>
@@ -28,7 +28,36 @@
 
 		<div class="thumbnail" id="containerDiv">
 			<div id="contentDiv">
-				<!-- <script src="js/whichPage.js"/> -->
+				<script>
+function WhichPage(){
+	var nav =  document.getElementById("navigation");
+
+	var links =  nav.getElementsByTagName("a");
+
+	var THref = window.location;
+	var pageName = THref.pathname.substr(THref.pathname.lastIndexOf('/') + 1);
+
+	var k = document.getElementsByTagName("li");
+
+	var count = links.length;
+	var specName = 'active';
+	// alert(pageName);
+	if (!pageName){
+	var mainPage = document.getElementById('mainPage');
+	mainPage.classList.add(specName);
+	}else{
+		for(var i=0; i<count; i++){
+			if(links[i].href == THref){
+				links[i].parentElement.classList.add(specName);
+				}else{
+					links[i].parentElement.classList.remove(specName);
+				}
+			}
+		}        
+}
+
+WhichPage();
+				</script>
 				<h1><center>Резюме</center></h1>
 					<div class="row">
 						<div class="col-lg-4 col-md-5 col-sm-6">

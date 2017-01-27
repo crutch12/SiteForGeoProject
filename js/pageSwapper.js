@@ -49,7 +49,6 @@ function WhichPage(){
 //WhichPage();
 
 $(document).ready(function() {
-	WhichPage();
     $('a').click(function() {
         var url = $(this).attr('href');
 
