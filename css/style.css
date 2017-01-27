@@ -10,7 +10,6 @@ body{
 
 .thumbnail{
 background-color: #ECECEA;
-/*height: 100%;*/
 margin-bottom: 20px;
 padding: 20px;
 }
@@ -31,10 +30,20 @@ border-color: #DDDDDD;
 }
 
  .hours, .minutes, .seconds{
- 	font-size: 50px;
+ 	font-size: 40px;
+ 	align-self: center;
 }
 
-.skills{
-	color: #107896;
-	font-family: 'Yanone Kaffeesatz';
+.skill{
+	height: 100%; 
+	min-height: 60px; 
+	border-width: 0 0 0 1px;
+	border-style: solid; 
+	border-color: #4A96AD;
+	word-wrap: break-word;
+}
+
+.skillName{
+		color: #107896;
+		word-wrap: break-word;
 }
