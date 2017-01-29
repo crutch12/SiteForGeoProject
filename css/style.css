@@ -44,6 +44,30 @@ border-color: #DDDDDD;
 }
 
 .skillName{
-		color: #107896;
-		word-wrap: break-word;
+	color: #107896;
+	word-wrap: break-word;
+}
+
+.timeline-back{
+	float: left;
+	margin-top: 25px;
+	background-color: #7FDBFF;
+	position: absolute;
+	height: 1.25vh;
+	width: 100%;
+}
+
+.timeline{
+	float: left;
+	margin-top: 25px;
+	background-color: #FF4136;
+	position: absolute;
+	height: 1.25vh;
+	width: 100%;
+
+	z-index: 5;
+}
+
+.timelineCont{
+	position: relative;
 }
