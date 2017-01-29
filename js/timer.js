@@ -11,7 +11,8 @@ function StartTimer() {
 	var minutesTime = document.getElementById('minutesTime');
 	var secondsTime = document.getElementById('secondsTime');
 
-    ShowTime(hoursTime, minutesTime, secondsTime);
+    //ShowTime(hoursTime, minutesTime, secondsTime);
+    Refresh();
     Tic(hoursTime, minutesTime, secondsTime);
 }
 
