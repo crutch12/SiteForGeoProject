@@ -56,7 +56,10 @@ function PasteZero(value){
 }
 
 window.addEventListener("focus", function(event) { 
+	Refresh();
+}, false);
 
+function Refresh(){
 	var hoursTime = document.getElementById('hoursTime');
 	var minutesTime = document.getElementById('minutesTime');
 	var secondsTime = document.getElementById('secondsTime');
@@ -71,4 +74,4 @@ window.addEventListener("focus", function(event) {
 		var timelineHour = document.getElementById('timelineHour');
 		timelineHour.style.width = (((Date.now() - start) % hourLength) / hourLength) * 100 + '%';
 	}
-}, false);
+}
