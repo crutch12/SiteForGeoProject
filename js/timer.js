@@ -18,6 +18,8 @@ var timelineSec;
 var timelineMin;
 var timelineHour;
 
+var percent = 100.75;
+
 function StartTimer() {
     hoursTime = document.getElementById('hoursTime');
     minutesTime = document.getElementById('minutesTime');
@@ -43,14 +45,14 @@ function ShowTime() {
     var minutes = Math.floor((passedTime - hours * 60 * 60) / 60);
     var seconds = Math.floor(passedTime - minutes * 60 - hours * 60 * 60);
 
-    timelineSec.style.width = (((Date.now() - start) % secLength) / secLength) * 100 + '%';
+    timelineSec.style.width = (((Date.now() - start) % secLength) / secLength) * percent + '%';
     if (tics % (10 * 2) == 0) {
 
-        timelineMin.style.width = (((Date.now() - start) % minLength) / minLength) * 100 + '%';
+        timelineMin.style.width = (((Date.now() - start) % minLength) / minLength) * percent + '%';
     }
     if (tics % (10 * 2 * 60) == 0) {
 
-        timelineHour.style.width = (((Date.now() - start) % hourLength) / hourLength) * 100 + '%';
+        timelineHour.style.width = (((Date.now() - start) % hourLength) / hourLength) * percent + '%';
     }
 
     hoursTime.innerHTML = PasteZero(hours);
@@ -72,10 +74,9 @@ window.addEventListener("focus", function (event) {
 }, false);
 
 function Refresh() {
-
-    timelineSec.style.width = (((Date.now() - start) % secLength) / secLength) * 100 + '%';
-    timelineMin.style.width = (((Date.now() - start) % minLength) / minLength) * 100 + '%';
-    timelineHour.style.width = (((Date.now() - start) % hourLength) / hourLength) * 100 + '%';
+    timelineSec.style.width = (((Date.now() - start) % secLength) / secLength) * percent + '%';
+    timelineMin.style.width = (((Date.now() - start) % minLength) / minLength) * percent + '%';
+    timelineHour.style.width = (((Date.now() - start) % hourLength) / hourLength) * percent + '%';
 }
 
 function StopTimer(pageName) {
