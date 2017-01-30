@@ -66,10 +66,13 @@ function PasteZero(value) {
 }
 
 window.addEventListener("focus", function (event) {
-    Refresh();
+    if (GetPageName() == timerPageName){
+        Refresh();
+    }
 }, false);
 
 function Refresh() {
+
     timelineSec.style.width = (((Date.now() - start) % secLength) / secLength) * 100 + '%';
     timelineMin.style.width = (((Date.now() - start) % minLength) / minLength) * 100 + '%';
     timelineHour.style.width = (((Date.now() - start) % hourLength) / hourLength) * 100 + '%';
