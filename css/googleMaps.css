@@ -1,62 +1,74 @@
 .mapscaler {
-height: 77vh;
+    height: 77vh;
 }
 
 #map {
-height: 100%;
+    height: 100%;
 }
 
-.big{
-position: fixed;
-width: 200px;
-height: 200px;
+.big {
+    position: fixed;
+    width: 200px;
+    height: 200px;
 
-animation-name: rotationBig;
-animation-duration: 1.75s;
-animation-iteration-count: infinite; 
-animation-timing-function: linear; 
+    animation-name: rotationBig;
+    animation-duration: 1.75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.little{
-position: fixed;
-width: 140px;
-height: 140px;
+.little {
+    position: fixed;
+    width: 140px;
+    height: 140px;
 
-margin-top: 30px;
-margin-left: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
 
-animation-name: rotationLittle;
-animation-duration: 4s;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
+    animation-name: rotationLittle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-@keyframes rotationBig { 
-0% {transform:rotate(0deg);} 
-40% {transform:rotate(170deg);} 
-60% {transform:rotate(190deg);} 
-100% {transform:rotate(360deg);} 
-} 
-
-@keyframes rotationLittle { 
-0% {transform:rotate(0deg);} 
-100% {transform:rotate(360deg);} 
-} 
-
-.preloader{
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-width: 200px;
-height: 200px;
-z-index: 10;
+@keyframes rotationBig {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(170deg);
+    }
+    60% {
+        transform: rotate(190deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.collapsed{
- visibility: collapse;
+@keyframes rotationLittle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.mapContainer{
-position:relative;
+.preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+}
+
+.collapsed {
+    visibility: collapse;
+}
+
+.mapContainer {
+    position: relative;
 }

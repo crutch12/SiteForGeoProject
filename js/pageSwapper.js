@@ -39,17 +39,18 @@ $(document).ready(function () {
     WhichPage();
     $('a').click(function () {
         var url = $(this).attr('href');
-
         $.ajax({
             url: url + '?ajax=1',
             success: function (result) {
                 SetHtmlContent(result);
+                // HideLoading();
             }
         });
 
         if (url != window.location) {
             window.history.pushState(null, null, url);
         }
+
         WhichPage();
         StopTimer(GetPageName());
 

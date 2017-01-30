@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Timer</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
 
-	<meta name="viewport" content="initial-scale=1.0">
-	<link rel="stylesheet" href="css/googleMaps.css">
-	<script src="js/timer.js"></script>
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="css/googleMaps.css">
+    <script src="js/timer.js"></script>
 </head>
 <body>
 
-	<div class="container bs-cont" >
-	
-		<div>
+<div class="container bs-cont">
 
-			<ul class="nav nav-pills nav-justified" id ="navigation">
-			  <li role="presentation" id="mainPage"><a href="index.html">Резюме</a></li>
-			  <li role="presentation"><a href="map.html">Карта</a></li>
-			  <li role="presentation"><a href="timer.html">Таймер</a></li>
-			</ul>
+    <div>
 
-		</div>
+        <ul class="nav nav-pills nav-justified" id="navigation">
+            <li role="presentation" id="mainPage"><a href="index.html">Резюме</a></li>
+            <li role="presentation"><a href="map.html">Карта</a></li>
+            <li role="presentation"><a href="timer.html">Таймер</a></li>
+        </ul>
 
-		<hr>
+    </div>
 
-		<div class="thumbnail" id="containerDiv">
-			<div id="contentDiv">
-			<h1><center>Время нахождения на сайте</center></h1>
+    <hr>
 
-				<div class="time row">
-					<hr>
-					
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<div>
-							<center id="hoursTime" class="hours"/>
-						</div>
-						<center>
-							Ч.
-						</center>
+    <div class="thumbnail" id="containerDiv">
+        <div id="contentDiv">
+            <h1>
+                <center>Время нахождения на сайте</center>
+            </h1>
 
-						<div class="timelineCont">
-							<div id="timelineHour" class="panel timeline">
-							</div>
-							<div class="panel timeline-back">
-							</div>
-						</div>
-					</div>
+            <div class="time row">
+                <hr>
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<div>
-							<center id="minutesTime" class="minutes"/>
-						</div>
-						<center>
-							М.
-						</center>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div>
+                        <center id="hoursTime" class="hours"/>
+                    </div>
+                    <center>
+                        Ч.
+                    </center>
 
-						<div class="timelineCont">
-							<div id="timelineMin" class="panel timeline">
-							</div>
-							<div class="panel timeline-back">
-							</div>
-						</div>
-					</div>
+                    <div class="timelineCont">
+                        <div id="timelineHour" class="panel timeline">
+                        </div>
+                        <div class="panel timeline-back">
+                        </div>
+                    </div>
+                </div>
 
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-						<div>
-							<center id="secondsTime" class="seconds"/>
-						</div>
-						<center>
-							С.
-						</center>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div>
+                        <center id="minutesTime" class="minutes"/>
+                    </div>
+                    <center>
+                        М.
+                    </center>
 
-						<div class="timelineCont">
-							<div id="timelineSec" class="panel timeline">
-							</div>
-							<div class="panel timeline-back">
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					StartTimer();
-				</script>
-			</div>
-		</div>
-	
-	</div>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/pageSwapper.js"></script>
+                    <div class="timelineCont">
+                        <div id="timelineMin" class="panel timeline">
+                        </div>
+                        <div class="panel timeline-back">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div>
+                        <center id="secondsTime" class="seconds"/>
+                    </div>
+                    <center>
+                        С.
+                    </center>
+
+                    <div class="timelineCont">
+                        <div id="timelineSec" class="panel timeline">
+                        </div>
+                        <div class="panel timeline-back">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                StartTimer();
+            </script>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/pageSwapper.js"></script>
 </body>
 </html>

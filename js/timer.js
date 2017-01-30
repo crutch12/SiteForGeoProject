@@ -68,7 +68,7 @@ function PasteZero(value) {
 }
 
 window.addEventListener("focus", function (event) {
-    if (GetPageName() == timerPageName){
+    if (GetPageName() == timerPageName) {
         Refresh();
     }
 }, false);
