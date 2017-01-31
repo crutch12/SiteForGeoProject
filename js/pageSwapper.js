@@ -47,7 +47,6 @@ $(document).ready(function () {
     $('a').click(function () {
         var url = $(this).attr('href');
 
-        console.log(url);
         if (GetPageName() == url){
             return false;
         }
