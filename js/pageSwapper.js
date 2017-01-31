@@ -23,6 +23,8 @@ function WhichPage() {
             if (links[i].href == THref) {
                 links[i].parentElement.classList.add(specName);
                 links[i].blur()
+                // links[i].parentElement.classList.add('disabled');
+                // console.log(links[i].parentElement);
             } else {
                 links[i].parentElement.classList.remove(specName);
             }
@@ -39,8 +41,18 @@ function GetPageName() {
 
 $(document).ready(function () {
     WhichPage();
+
+    // $(".nav li.disabled a").click(function() {
+    //     return false;
+    // });
+
     $('a').click(function () {
         var url = $(this).attr('href');
+
+        if (GetPageName() == url){
+            return false;
+        }
+
         $.ajax({
             url: url + '?ajax=1',
             success: function (result) {
@@ -58,6 +70,8 @@ $(document).ready(function () {
 
         return false;
     });
+
+
 });
 
 $(window).bind('popstate', function () {

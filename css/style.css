@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 body {
     /*background-color: #F5F3EE;*/
     /*background: #ffffff;*/
@@ -24,14 +28,15 @@ body {
 
 hr {
     /*border-color: #DDDDDD;*/
-    border-color: rgba(0, 104, 103, 0.27);
+    border-color: rgba(0, 104, 103, 0.5);
+    /*width: 95%;*/
 }
 
 .time {
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
-    margin-bottom: 5%;
+    margin-bottom: 60px;
 }
 
 .hours, .minutes, .seconds {
@@ -89,4 +94,9 @@ hr {
 
 .active > a {
     background-color: #5599CC !important;
+    display: block;
+}
+
+.nav > li > a:hover{
+    color: #0246bd;
 }
