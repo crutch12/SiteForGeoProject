@@ -17,10 +17,12 @@ function WhichPage() {
 
         var mainPage = document.getElementById('mainPage');
         mainPage.classList.add(specName);
+        mainPage.blur();
     } else {
         for (var i = 0; i < count; i++) {
             if (links[i].href == THref) {
                 links[i].parentElement.classList.add(specName);
+                links[i].blur()
             } else {
                 links[i].parentElement.classList.remove(specName);
             }

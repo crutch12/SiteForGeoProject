@@ -1,7 +1,7 @@
 body {
     /*background-color: #F5F3EE;*/
     /*background: #ffffff;*/
-    background-image: url('../images/giftly.png');
+    background-image: url('../images/45degreee_fabric.png');
 }
 
 .image {
@@ -12,18 +12,19 @@ body {
 
 .thumbnail {
     /*background-color: #ECECEA;*/
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
     margin-bottom: 20px;
     padding: 20px;
+    border-radius: 15px;
 }
 
 .nav {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 hr {
     /*border-color: #DDDDDD;*/
-    border-color: #DDDAAA;
+    border-color: rgba(0, 104, 103, 0.27);
 }
 
 .time {
@@ -74,4 +75,18 @@ hr {
 
 .timelineCont {
     position: relative;
+}
+
+.nav > li > a {
+    margin: 5px 10px 5px 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 15px;
+}
+
+/*.nav > li > a:active{*/
+/**/
+/*}*/
+
+.active > a {
+    background-color: #4A96AD !important;
 }
