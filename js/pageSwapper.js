@@ -23,8 +23,6 @@ function WhichPage() {
             if (links[i].href == THref) {
                 links[i].parentElement.classList.add(specName);
                 links[i].blur()
-                // links[i].parentElement.classList.add('disabled');
-                // console.log(links[i].parentElement);
             } else {
                 links[i].parentElement.classList.remove(specName);
             }
@@ -49,6 +47,7 @@ $(document).ready(function () {
     $('a').click(function () {
         var url = $(this).attr('href');
 
+        console.log(url);
         if (GetPageName() == url){
             return false;
         }
